@@ -49,7 +49,7 @@ public void user_is_navigated_to_the_login_page() {
 public void user_logs_out_of_account() {
 	Lobject.clickLogoutBttn();
 	
-	 BaseClass.tearDown();
+	
 }
 
 }

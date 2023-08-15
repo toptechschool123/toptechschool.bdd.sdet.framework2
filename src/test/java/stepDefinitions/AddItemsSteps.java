@@ -8,42 +8,58 @@ import pageObjects.AddItemsPageObjects;
 
 public class AddItemsSteps extends BaseClass {
 	
-	AddItemsPageObjects obj = new AddItemsPageObjects();
+	AddItemsPageObjects object = new AddItemsPageObjects();
 	
-	
-	@Given("I want to write a step with precondition")
-	public void i_want_to_write_a_step_with_precondition() {
-	   BaseClass.initializeDriver();
+	@Given("user is on homepage")
+	public void user_is_on_homepage() {
+	  BaseClass.initializeDriver();
 	}
 
-	@Given("some other precondition")
-	public void some_other_precondition() {
-	   obj.clickMyAccount();
+	@When("user clicks myAccount")
+	public void user_clicks_my_account() {
+		object.clickMyAccount();
 	}
 
-	@When("I complete action")
-	public void i_complete_action() {
-	   
+	@When("user clicks loginBttn")
+	public void user_clicks_login_bttn() {
+		object.clickLogin();
 	}
 
-	@When("some other action")
-	public void some_other_action() {
-	   
+	@When("user enters email {string} and password {string}")
+	public void user_enters_email_and_password(String email, String pass) {
+	    object.enterEmail(email, pass);
 	}
 
-	@When("yet another action")
-	public void yet_another_action() {
-	   
+	@When("user clicks login")
+	public void user_clicks_login() {
+		object.clickLoginButton();
 	}
 
-	@Then("I validate the outcomes")
-	public void i_validate_the_outcomes() {
-	   
+	@Then("user moves to Cameras")
+	public void user_moves_to_cameras() throws InterruptedException {
+		object.moveToCameras();
+		Thread.sleep(3000);
 	}
 
-	@Then("check more outcomes")
-	public void check_more_outcomes() {
-	    
+	@Then("user moves to SonyItem and clicks it")
+	public void user_moves_to_sony_item_and_clicks_it() throws InterruptedException {
+		Thread.sleep(3000);
+		object.moveToSonyItems();
+	}
+
+	@Then("user adds an item to shopping cart")
+	public void user_adds_an_item_to_shopping_cart() {
+		object.addItemToCart();
+	}
+
+	@Then("user clicks My Account at the bottom of the page")
+	public void user_clicks_my_account_at_the_bottom_of_the_page() {
+		object.clickMyAccount2(); 
+	}
+
+	@Then("user logs out")
+	public void user_logs_out() {
+		object.clickLogout();
 	}
 
 

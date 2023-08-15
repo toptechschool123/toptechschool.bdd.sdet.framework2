@@ -51,7 +51,7 @@ public class Initializer extends BaseClass {
 
 	@After
 	public void afterHooks() {
-	//	BaseClass.tearDown();
+		BaseClass.tearDown();
 	
 		
 	}
