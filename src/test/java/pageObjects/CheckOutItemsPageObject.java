@@ -7,17 +7,16 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import core.BaseClass;
-import utils.DriverUtility;
 
-public class AddItemsPageObjects extends BaseClass{
+public class CheckOutItemsPageObject extends BaseClass {
 	
-	public AddItemsPageObjects() {
+	
+	public CheckOutItemsPageObject() {
+		
 		
 		PageFactory.initElements(driver, this);
 	}
 	
-	
-
 	@FindBy(how = How.XPATH, using = "//*[@id=\"top-links\"]/ul/li[2]/a/span[1]" )
 	private WebElement MyAccount;
 
@@ -50,7 +49,9 @@ public class AddItemsPageObjects extends BaseClass{
 	@FindBy(how = How.XPATH, using = "//a[text()='logout']")
 	private WebElement LogoutButton;
 	
-	public void clickMyAccount() {
+	
+   public void clickMyAccount() {
+		
 		MyAccount.click();
 	}
 	
@@ -58,33 +59,29 @@ public class AddItemsPageObjects extends BaseClass{
 		Login.click();
 	}
 	
-	public void enterEmail(String email, String password) {
+	public void enterEmail( String email) { 
 		Email.sendKeys(email);
-		Password.sendKeys(password);
 	}
 	
-	public void clickLoginButton() {
-		//LoginButton.click();
-		DriverUtility.clickonElement(LoginButton);
+	public void enterPassword(String passw) {
+		Password.sendKeys(passw);
+	}
+	
+	public void clickLoginBttn() {
+		LoginButton.click();
 	}
 	
 	public void moveToCameras() throws InterruptedException {
 		
 		Actions a = new Actions(driver);
 		a.moveToElement(Cameras).build().perform();
-		Thread.sleep(3000);
-	}
 	
-	public void moveToSonyItems() throws InterruptedException {
-		Thread.sleep(3000);
-		Actions a = new Actions(driver);
-		a.moveToElement(SonyItem).click().build().perform();
-		//DriverUtility.moveToElementAction(SonyItem);
-	//	DriverUtility.clickonElement(SonyItem);
-		DriverUtility.screenShot();
-		
 	}
+	public void  moveToSonyItem() throws InterruptedException {
+		Actions act = new Actions(driver);
+		act.moveToElement(SonyItem).click().build().perform();
 	
+	}
 	public void addItemToCart() {
 		AddToCart.click();
 	}
@@ -92,8 +89,8 @@ public class AddItemsPageObjects extends BaseClass{
 	public void clickMyAccount2() {
 		MyAccount2.click();
 	}
-	
-	public void clickLogout() {
-		DriverUtility.clickonElement(LogoutButton);
+	public void clickLogoutBttn() {
+		LogoutButton.click();
 	}
+	
 }
