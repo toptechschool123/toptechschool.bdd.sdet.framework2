@@ -104,6 +104,7 @@ public class RegistrationFormPageObjects extends BaseClass {
 
 	public void clickPrivacyPolicy() {
 		clickPrivacyCheckBox.click();
+		
 	}
 
 	public void clickContinueBttn() {

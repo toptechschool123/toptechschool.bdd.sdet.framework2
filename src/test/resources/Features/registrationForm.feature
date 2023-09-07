@@ -6,8 +6,8 @@ Feature: Register new user functionality
     When User click on MyAccount
     And User click on Register
     And user fills out the following information
-      | FirstName | LastName | Email                     | Telephone  | Country     | Password | ConfirmPassword |
-      | Sayed     | Sadat    | sayed0220@toptechschool.us | 2536529199 | Afghanistan | test123  | test123         |
+      | FirstName | LastName | Email                        | Telephone  | Password | ConfirmPassword |
+      | Sayed     | Sadat    | sayed0322205@toptechschool.us | 2536529199 | test123  | test123         |
     And User select 'yes' for Subscribe
     And User click privacy and policy button
     And User click Continue button

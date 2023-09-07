@@ -2,11 +2,12 @@ package pageObjects;
 
 
 
+import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-
 
 import core.BaseClass;
 
@@ -56,10 +57,35 @@ public class LoginPageObjects extends BaseClass  {
 	
 	public void clickLoginBttn() {
 		LoginButton.click();
+		
+		
+		String actualTitle =driver.getTitle();
+		String expectedTitle = "Login";
+		
+		//Assertions.assertEquals(actualTitle, expectedTitle);
+		
+		//Assert.assertNotEquals(expectedTitle, actualTitle);
+		Assertions.assertEquals(actualTitle, expectedTitle);
 	}
+	
 	
 	public void clickLogoutBttn() {
 		LogoutButton.click();
+		
+		
+		String actualTitle =driver.getTitle();
+		String expectedTitle = "R";
+		
+	
+	
+		//Assert.assertEquals(expectedTitle, actualTitle);
+		//Assert.assertEquals("actualTitle is Login", actualTitle, expectedTitle);
+		
+		//Assertions.assertEquals(actualTitle, expectedTitle);
+		
+		Assertions.assertNotEquals(actualTitle, expectedTitle);
+		
+	
 	}
 }
 

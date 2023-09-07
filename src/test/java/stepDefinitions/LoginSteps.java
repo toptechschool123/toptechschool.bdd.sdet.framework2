@@ -21,6 +21,8 @@ public void the_user_is_on_the_homepage() {
 @When("user clicks on MyAccount")
 public void user_clicks_on_my_account() {
 	Lobject.clickMyAccount();
+	logger.info("user is clicking on my account");
+	
 }
 
 @When("user click on login")
@@ -32,7 +34,7 @@ public void user_click_on_login() {
 public void user_enters_and(String email, String password) {
 	Lobject.enterEmail(email);
 	Lobject.enterPassword(password);
-	
+	logger.info("user is entering email and password");
 }
 
 @When("user clicks login button")
@@ -42,13 +44,13 @@ public void user_clicks_login_button() {
 
 @Then("user is navigated to the login page")
 public void user_is_navigated_to_the_login_page() {
-  
+  logger.info("user is navigated to the login page");
 }
 
 @Then("user logs out of account")
 public void user_logs_out_of_account() {
 	Lobject.clickLogoutBttn();
-	
+	logger.info("user logs out of the accout");
 	
 }
 
