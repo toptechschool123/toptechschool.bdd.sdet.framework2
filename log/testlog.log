@@ -294,3 +294,13 @@
 2023-09-02 15:01:00,422 - Logger_File -INFO - user is entering email and password
 2023-09-02 15:01:00,622 - Logger_File -INFO - user is navigated to the login page
 2023-09-02 15:01:01,241 - Logger_File -INFO - user logs out of the accout
+2024-02-26 09:19:55,909 - Logger_File -INFO - user is on the home page
+2024-02-26 09:19:56,313 - Logger_File -INFO - user is clicking on my account
+2024-02-26 09:19:57,669 - Logger_File -INFO - user is entering email and password
+2024-02-26 09:19:57,899 - Logger_File -INFO - user is navigated to the login page
+2024-02-26 09:19:58,829 - Logger_File -INFO - user logs out of the accout
+2024-02-26 09:20:47,387 - Logger_File -INFO - user is on the home page
+2024-02-26 09:20:47,776 - Logger_File -INFO - user is clicking on my account
+2024-02-26 09:20:49,128 - Logger_File -INFO - user is entering email and password
+2024-02-26 09:20:49,351 - Logger_File -INFO - user is navigated to the login page
+2024-02-26 09:20:50,232 - Logger_File -INFO - user logs out of the accout

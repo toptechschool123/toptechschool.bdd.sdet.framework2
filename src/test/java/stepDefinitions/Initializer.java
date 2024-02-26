@@ -18,6 +18,8 @@ public class Initializer extends BaseClass {
 	@Before
 	public void beforeHooks() {
 		
+		
+
 		BaseClass.getBrowserName();
 		WebDriverManager.chromedriver().setup();
 		
@@ -27,23 +29,24 @@ public class Initializer extends BaseClass {
 		 driver = new ChromeDriver(options);
 		BaseClass.getURL();
 		
-	/*
-		if (BaseClass.getBrowserName().equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-
-		} else if (BaseClass.getBrowserName().equals("IE")) {
-
-			WebDriverManager.iedriver().setup();
-			driver = new InternetExplorerDriver();
-		} else if (BaseClass.getBrowserName().equals("FF")) {
-
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-
-		}
-*/
 		
+		
+		/*
+		 * 
+		 * 
+		 * if (BaseClass.getBrowserName().equalsIgnoreCase("chrome")) {
+		 * WebDriverManager.chromedriver().setup(); driver = new ChromeDriver();
+		 * 
+		 * } else if (BaseClass.getBrowserName().equals("IE")) {
+		 * 
+		 * WebDriverManager.iedriver().setup(); driver = new InternetExplorerDriver(); }
+		 * else if (BaseClass.getBrowserName().equals("FF")) {
+		 * 
+		 * WebDriverManager.firefoxdriver().setup(); driver = new FirefoxDriver();
+		 * 
+		 * }
+		 * 
+		 */	
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(45));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(45));
